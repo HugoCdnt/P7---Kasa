@@ -1,0 +1,22 @@
+.lodging-item {
+    width: 340px;
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.lodging-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+.lodging-item p {
+    margin-top: -50px;
+    margin-left: 10px;
+    color: white;
+    font-size: 1.1rem;
+}
