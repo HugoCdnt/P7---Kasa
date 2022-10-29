@@ -1,14 +1,12 @@
+import Banner from "../components/Banner";
 import LodgingList from "../components/Home/LodgingList"
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import '../styles/index.css'
 
 const Home = () => {
   return (
     <div>
-      <Header />
+      <Banner />
       <LodgingList />
-      <Footer />
     </div >
   )
 }
