@@ -1,17 +1,20 @@
-import Reliability from '../components/About/Reliability';
-import Responsability from '../components/About/Responsability';
-import Respect from '../components/About/Respect';
-import Service from '../components/About/Service';
 import Banner from '../components/Banner';
+import Wrapper from '../components/About/Wrapper';
+import WrapperList from '../components/Wrapper/WrapperList';
 
 const About = () => {
+
+  const titles = ["Test", "Test 2", "Test 5", "Pipi"];
+
     return (
       <div>
         <Banner />
-        <Reliability />
-        <Responsability />
-        <Respect />
-        <Service />
+        {/* <Wrapper title="Fiabilité" />
+        <Wrapper title="Respect" />
+        <Wrapper title="Responsabilité" />
+        <Wrapper title="Service" /> */}
+        {/* <Wrapper titles={titles} /> */}
+        <WrapperList titles={titles} />
       </div >
     )
   }
