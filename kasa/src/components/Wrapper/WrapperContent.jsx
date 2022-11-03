@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const WrapperContent = ({ title }) => {
+const WrapperContent = ({ title, text }) => {
     const [isOpen, setIsOpen] = useState(false)
 
     return (
@@ -8,7 +8,7 @@ const WrapperContent = ({ title }) => {
             {isOpen ? (
                 <div>
                     <button onClick={() => setIsOpen(false)}>{title}</button>
-                    <p>Blablabla</p>
+                    <p>{text}</p>
                 </div>
             ) : (
                 <button onClick={() => setIsOpen(true)}>{title}</button>

@@ -1,20 +1,13 @@
 import Banner from '../components/Banner';
-import Wrapper from '../components/About/Wrapper';
 import WrapperList from '../components/Wrapper/WrapperList';
 
+import data from '../data/dataAbout.json'
+
 const About = () => {
-
-  const titles = ["Test", "Test 2", "Test 5", "Pipi"];
-
     return (
       <div>
         <Banner />
-        {/* <Wrapper title="Fiabilité" />
-        <Wrapper title="Respect" />
-        <Wrapper title="Responsabilité" />
-        <Wrapper title="Service" /> */}
-        {/* <Wrapper titles={titles} /> */}
-        <WrapperList titles={titles} />
+        <WrapperList data={data}/>
       </div >
     )
   }
