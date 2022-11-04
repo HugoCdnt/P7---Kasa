@@ -1,6 +1,32 @@
-// import '/Users/hugocadenat/Documents/Formation_dév_web/P7/kasa/src/styles/LodgingItem.css';
+import '/Users/hugocadenat/Documents/Formation_dév_web/P7/kasa/src/styles/Lodging.css'
 
-import LodgingBanner from "./LodgingBanner"
+const Lodging = ({ cover, title, id, location, tags, host, hostPhoto, rating }) => {
+    return (
+        <div key={id}>
+            <div className="lodging-page--heading">
+                <div className="title-location-tags">
+                    <h1>{title}</h1>
+                    <p>{location}</p>
+                    <ul className="tags">
+                        {tags.map((tag) => 
+                            <li>{tag}</li>
+                            )}
+                    </ul>
+                </div>
+                <div className="host-rating">
+                    <div className='host'>
+                        <p>{host}</p>
+                        <img className='host-photo' src={hostPhoto} alt={host}/>
+                    </div>
+                    <p>{rating}</p>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default Lodging
+
 
 // const Lodging = ({ cover, title, id, location, tags }) => {
 //     return (
@@ -12,16 +38,3 @@ import LodgingBanner from "./LodgingBanner"
 //         </div>
 //     )
 // }
-
-const Lodging = ({ cover, title, id, location, tags }) => {
-    return (
-        <div key={id}>
-            {/* <LodgingBanner cover={cover} title={title} /> */}
-            <h1>{title}</h1>
-            <p>{location}</p>
-            <ul>{tags}</ul>
-        </div>
-    )
-}
-
-export default Lodging

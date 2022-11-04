@@ -1,0 +1,51 @@
+.lodging-page--heading{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.host-rating{
+    display: flex;
+    flex-direction: column;
+}
+
+.host{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.host p{
+    text-align: center;
+}
+
+ul{
+    padding: 0;
+}
+
+li{
+    list-style: none;
+}
+
+.tags li{
+    display: inline;
+    margin-right: 15px;
+    background-color: #FF6060;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    height: 25px;
+    padding: 0 20px;
+}
+
+.host-photo{
+    width: 64px;
+    height: 64px;
+    border-radius: 45px;
+    margin-left: 10px;
+}
+
+h1, .host p, .title-location-tags p{
+    color: #FF6060;
+}

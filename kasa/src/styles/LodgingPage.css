@@ -1,0 +1,13 @@
+.lodging-collapses{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lodging-collapses > div > p{
+    height: 200px;
+}
+
+.lodging-collapses > div{
+    width: 45%;
+}
