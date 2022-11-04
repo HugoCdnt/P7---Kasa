@@ -18,10 +18,11 @@ import ('/Users/hugocadenat/Documents/Formation_dév_web/P7/kasa/src/styles/Abo
 const WrapperList = ({data}) => {    
     return (
             <ul className='wrappers-list'>
-                {data.map(({ title, text }) =>
+                {data.map(({ title, text, description }) =>
                     <WrapperContent
                         title={title}
                         text={text}
+                        description={description}
                     />
                 )}
             </ul>

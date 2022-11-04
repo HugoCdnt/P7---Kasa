@@ -32,3 +32,7 @@ button{
 .about-component p{
     padding: 5px 10px 5px 10px;
 }
+
+.wrapper-content{
+    list-style: none;
+}
