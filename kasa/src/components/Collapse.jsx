@@ -3,7 +3,7 @@ import { useState } from 'react';
 import ('/Users/hugocadenat/Documents/Formation_dév_web/P7/kasa/src/styles/Collapse.css');
 
 const Collapse = ({ title, description }) => {
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(true)
  
     return (
         // <ul>

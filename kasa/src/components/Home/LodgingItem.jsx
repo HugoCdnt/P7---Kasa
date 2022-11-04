@@ -9,6 +9,7 @@ const LodgingItem = ({ cover, title, id }) => {
         <li className='lodging-item' key={id}>
             <NavLink
                 to= {url} end
+                style={{ textDecoration: 'none' }}
                 >
                 <img className='lodging-item-cover' src={cover} alt={`${title} cover`} />
                 <p>{title}</p>
