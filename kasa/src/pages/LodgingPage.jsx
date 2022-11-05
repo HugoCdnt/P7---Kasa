@@ -7,8 +7,8 @@ import lodgings from '/Users/hugocadenat/Documents/Formation_dév_web/P7/kasa/s
 
 // Composants
 import Lodging from '../components/LodgingPage/Lodging'
-import LodgingBanner from '../components/LodgingPage/LodgingBanner'
 import Collapse from '../components/Collapse'
+import ImageSlider from '../components/ImageSlider'
 
 // Styles
 import '/Users/hugocadenat/Documents/Formation_dév_web/P7/kasa/src/styles/Collapse.css'
@@ -22,11 +22,17 @@ const LodgingPage = () => {
         return lodging.id === id;
     })
 
-    console.log(foundLodging);
+    const containerStyles = {
+        width: '100%',
+        height: '415px',
+        margin: '0 auto'
+    }
 
     return (
         <div className='lodging'>
-            <LodgingBanner cover={foundLodging.cover}/>
+            <div style={containerStyles}>
+                <ImageSlider slides={foundLodging.pictures} />
+            </div>
             <Lodging
                 title={foundLodging.title}
                 id={id}
