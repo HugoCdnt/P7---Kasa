@@ -12,6 +12,7 @@ const NavBar = () => {
                 <li>
                     <NavLink 
                         to="/" end
+                        style={({ isActive }) => isActive ? activeStyle : undefined}
                     >
                         Accueil
                     </NavLink>
