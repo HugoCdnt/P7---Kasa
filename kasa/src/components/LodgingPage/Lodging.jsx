@@ -17,7 +17,10 @@ const Lodging = ({ cover, title, id, location, tags, host, hostPhoto, rating }) 
                 </div>
                 <div className="host-rating">
                     <div className='host'>
-                        <p>{host}</p>
+                        <p>
+                            {host.split(' ')[0]}<br />
+                            {host.split(' ')[1]}
+                        </p>
                         <img className='host-photo' src={hostPhoto} alt={host}/>
                     </div>
                     {/* <p>{rating}</p> */}

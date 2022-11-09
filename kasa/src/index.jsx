@@ -16,6 +16,8 @@ import Footer from './components/Footer'
 import NotFound from './components/NotFound'
 // import { Navigate } from 'react-router-dom'
 
+// STYLES
+
 const container = document.getElementById('root')
 const root = createRoot(container)
 

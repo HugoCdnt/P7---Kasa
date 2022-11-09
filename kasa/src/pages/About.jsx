@@ -4,6 +4,7 @@ import Collapse from '../components/Collapse';
 
 // import '/Users/hugocadenat/Documents/Formation_dév_web/P7/kasa/src/styles/About.css'
 import '../styles/About.css'
+import bannerAbout from '../images/banner-about.png'
 
 // import WrapperList from '../components/Wrapper/WrapperList';
 
@@ -14,7 +15,9 @@ const About = () => {
 
   return (
     <div>
-      <Banner />
+      <Banner 
+        image={bannerAbout}
+      />
       <div className="test">
         {data.map(data => <Collapse title={data.title} description={data.text}/>)}
       </div >

@@ -35,7 +35,7 @@ const Collapse = ({ title, description }) => {
             >{title}{arrowDown}</button>
         </div>
     ) : (
-        <div>
+        <div className='collapse'>
             <button 
                 className='collapse-button'
                 onClick={() => setIsOpen(false)}
