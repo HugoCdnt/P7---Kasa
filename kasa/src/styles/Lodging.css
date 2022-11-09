@@ -8,12 +8,16 @@
 .host-rating{
     display: flex;
     flex-direction: column;
+    width: 30%;
+    text-align: right;
 }
 
 .host{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    justify-content: flex-end;
+    /* text-align: right; */
+    margin-bottom: 15px;
 }
 
 .host p{
@@ -35,8 +39,7 @@ li{
     color: white;
     border: 0;
     border-radius: 10px;
-    height: 25px;
-    padding: 0 20px;
+    padding: 5px 20px;
 }
 
 .host-photo{
@@ -48,4 +51,24 @@ li{
 
 h1, .host p, .title-location-tags p{
     color: #FF6060;
+}
+
+.lodging-page--title{
+    margin-bottom: -10px;
+}
+
+.lodging-page--location{
+    margin-bottom: 25px;
+}
+
+.tags{
+    margin-bottom: 25px;
+}
+
+.lodging-page--title{
+    width: 100%;
+}
+
+.title-location-tags{
+    max-width : 70%
 }

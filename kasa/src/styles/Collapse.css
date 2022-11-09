@@ -1,18 +1,22 @@
 .collapse{
     margin-bottom: 10px;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between; */
 }
 
 .collapse-button{
-    height: 29px;
+    /* height: 29px; */
     background-color: #FF6060;
     color: white;
     border: 0;
     border-radius: 5px;
-    padding: 5px 10px 5px 10px;
+    padding: 10px;
     text-align: left;
     font-size: 1rem;
     list-style: none;
     width: 100%;
+    position: relative;
 }
 
 .collapse-description{
@@ -22,4 +26,17 @@
     margin: -15px 0 0 0;
     padding: 30px 10px 10px 10px;
     line-height: 25px;
+}
+
+.arrow{
+    position: absolute;
+    right: 20px;
+    top: 35%;
+    /* bottom: 50%; */
+    width: 20px;
+    /* text-align: center; */
+}
+
+.arrow-down{
+    transform: rotate(180deg);
 }

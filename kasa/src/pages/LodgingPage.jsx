@@ -9,7 +9,6 @@ import lodgings from '/Users/hugocadenat/Documents/Formation_dév_web/P7/kasa/s
 import Lodging from '../components/LodgingPage/Lodging'
 import Collapse from '../components/Collapse'
 import ImageSlider from '../components/ImageSlider'
-import Rating from '../components/Rating'
 
 // Styles
 import '/Users/hugocadenat/Documents/Formation_dév_web/P7/kasa/src/styles/Collapse.css'
@@ -34,7 +33,6 @@ const LodgingPage = () => {
             <div style={containerStyles}>
                 <ImageSlider slides={foundLodging.pictures} />
             </div>
-            <Rating notation={foundLodging.rating}/>
             <Lodging
                 title={foundLodging.title}
                 id={id}
@@ -42,9 +40,10 @@ const LodgingPage = () => {
                 tags={foundLodging.tags}
                 host={foundLodging.host.name}
                 hostPhoto = {foundLodging.host.picture}
+                rating = {foundLodging.rating}
             />
             <div className='lodging-collapses'>
-                <Collapse title={foundLodging.title} description={foundLodging.description}/>
+                <Collapse title="Description" description={foundLodging.description}/>
                 <Collapse title="Équipements" description={foundLodging.equipments.map((equipment) => <li>{equipment}</li>)}/>
             </div>
         </div>

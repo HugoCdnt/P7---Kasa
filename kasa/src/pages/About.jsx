@@ -12,10 +12,12 @@ import data from '../data/dataAbout.json'
 const About = () => {
 
   return (
-      <div>
-        <Banner />
+    <div>
+      <Banner />
+      <div className="test">
         {data.map(data => <Collapse title={data.title} description={data.text}/>)}
       </div >
+    </div>
     )
   }
   
