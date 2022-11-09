@@ -3,7 +3,8 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 
 // Data
-import lodgings from '/Users/hugocadenat/Documents/Formation_dév_web/P7/kasa/src/data/logements.json'
+// import lodgings from '/Users/hugocadenat/Documents/Formation_dév_web/P7/kasa/src/data/logements.json'
+import lodgings from '../data/logements.json'
 
 // Composants
 import Lodging from '../components/LodgingPage/Lodging'
@@ -11,9 +12,7 @@ import Collapse from '../components/Collapse'
 import ImageSlider from '../components/ImageSlider'
 
 // Styles
-// import '/Users/hugocadenat/Documents/Formation_dév_web/P7/kasa/src/styles/Collapse.css'
 import '../styles/Collapse.css'
-// import '/Users/hugocadenat/Documents/Formation_dév_web/P7/kasa/src/styles/LodgingPage.css'
 import '../styles/LodgingPage.css'
 
 
