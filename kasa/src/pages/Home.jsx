@@ -1,3 +1,5 @@
+import {React, useEffect } from 'react'
+
 import Banner from "../components/Banner";
 import LodgingList from "../components/Home/LodgingList"
 import '../styles/index.css'
@@ -6,6 +8,11 @@ import '../styles/index.css'
 import bannerBackground from '../images/banner_img_home.png'
 
 const Home = () => {
+
+  useEffect(() => {
+    document.title = `KASA`
+})
+
   return (
     <div>
       <Banner 

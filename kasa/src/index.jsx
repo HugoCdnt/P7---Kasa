@@ -30,8 +30,9 @@ root.render(
         <Route path="/" element={<Home />}/>
         <Route path="/about" element={<About />}/>
         <Route path="/:id" element={<LodgingPage />}/>
-        {/* <Route path="*" element={<NotFound />}/> */}
-        <Route path="notfound" element={<NotFound />}/>
+        <Route path="*" element={<NotFound />}/>
+        {/* <Route path="/notfound" element={<NotFound />}/> */}
+        {/* <Route path="notfound" element={<NotFound />}/> */}
         {/* {/* <Route path="notfound" element={<NotFound/>}/> */}
       </Routes>
       <Footer />

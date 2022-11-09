@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 // import ('/Users/hugocadenat/Documents/Formation_dév_web/P7/kasa/src/styles/About.css');
 // import arrow from '../images/arrow.svg'
 import arrow from '../images/arrow.svg'

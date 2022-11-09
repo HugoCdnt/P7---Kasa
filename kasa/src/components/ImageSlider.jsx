@@ -38,6 +38,27 @@ const ImageSlider = ({slides}) => {
         zIndex: 1,
         cursor: 'pointer'
     }
+
+    const dotsContainerStyles = {
+        display: 'flex',
+        justifyContent: 'center',
+    }
+
+    const dotStyles = {
+        margin: '0 3px',
+        cursor: 'pointer',
+        fontSize: '40px',
+        color: 'white',
+        textShadow: '1px 1px 2px black'
+    }
+
+    const slideIndex = {
+        display: 'flex',
+        justifyContent: 'center',
+        margin: '-45px 0 -15px 0',
+        color: 'white',
+        textShadow: '1px 1px 2px black'
+    }
  
     const goToPrevious = () => {
         const isFirstSlide = currentIndex === 0;
@@ -51,11 +72,25 @@ const ImageSlider = ({slides}) => {
         setCurrentIndex(newIndex);
     }
 
+    const goToSlide = (slideIndex) => {
+        setCurrentIndex(slideIndex)
+    }
+
+    // const showIndex = () => {
+    //     <div>{currentIndex}/{slides.length}</div>
+    // }
+
     return (
         <div style={sliderStyles}>
             <div style={leftArrowStyles} onClick={goToPrevious}>❰</div>
             <div style={rightArrowStyles} onClick={goToNext}>❱</div>
             <div style={slideStyles}></div>
+            <div style={slideIndex}>{currentIndex + 1}/{slides.length}</div>
+            <div style={dotsContainerStyles}>
+                {slides.map((slide, slideIndex) => 
+                        <div key={slideIndex} style={dotStyles} onClick={() => goToSlide(slideIndex)}>•</div>
+                )}
+            </div>
         </div>
     )
 }

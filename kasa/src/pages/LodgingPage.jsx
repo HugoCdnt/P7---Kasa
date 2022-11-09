@@ -1,9 +1,8 @@
 // Plugins React
-import React from 'react'
+import {React, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
 // Data
-// import lodgings from '/Users/hugocadenat/Documents/Formation_dév_web/P7/kasa/src/data/logements.json'
 import lodgings from '../data/logements.json'
 
 // Composants
@@ -28,6 +27,10 @@ const LodgingPage = () => {
         height: '415px',
         margin: '0 auto'
     }
+
+    useEffect(() => {
+        document.title = `${foundLodging.title}`
+    }, [foundLodging.title])
 
     return (
         <div className='lodging'>

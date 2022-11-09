@@ -1,4 +1,6 @@
 // Composants
+import {React, useEffect } from 'react'
+
 import Banner from '../components/Banner';
 import Collapse from '../components/Collapse';
 
@@ -12,6 +14,10 @@ import bannerAbout from '../images/banner-about.png'
 import data from '../data/dataAbout.json'
 
 const About = () => {
+
+  useEffect(() => {
+    document.title = `A Propos`
+  })
 
   return (
     <div>
