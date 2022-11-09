@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 // import ('/Users/hugocadenat/Documents/Formation_dév_web/P7/kasa/src/styles/About.css');
 // import arrow from '../images/arrow.svg'
 import arrow from '../images/arrow.svg'
-import ('/Users/hugocadenat/Documents/Formation_dév_web/P7/kasa/src/styles/Collapse.css');
+// import ('/Users/hugocadenat/Documents/Formation_dév_web/P7/kasa/src/styles/Collapse.css');
+import '../styles/Collapse.css';
 
 
 const Collapse = ({ title, description }) => {

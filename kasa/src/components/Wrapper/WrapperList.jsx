@@ -1,5 +1,6 @@
 import WrapperContent from './WrapperContent'
-import ('/Users/hugocadenat/Documents/Formation_dév_web/P7/kasa/src/styles/About.css');
+// import ('/Users/hugocadenat/Documents/Formation_dév_web/P7/kasa/src/styles/About.css');
+import '../../styles/About.css';
 
 // const WrapperList = ({titles}) => {    
 // const WrapperList = ({titles, text}) => {    

@@ -11,8 +11,10 @@ import Collapse from '../components/Collapse'
 import ImageSlider from '../components/ImageSlider'
 
 // Styles
-import '/Users/hugocadenat/Documents/Formation_dév_web/P7/kasa/src/styles/Collapse.css'
-import '/Users/hugocadenat/Documents/Formation_dév_web/P7/kasa/src/styles/LodgingPage.css'
+// import '/Users/hugocadenat/Documents/Formation_dév_web/P7/kasa/src/styles/Collapse.css'
+import '../styles/Collapse.css'
+// import '/Users/hugocadenat/Documents/Formation_dév_web/P7/kasa/src/styles/LodgingPage.css'
+import '../styles/LodgingPage.css'
 
 
 

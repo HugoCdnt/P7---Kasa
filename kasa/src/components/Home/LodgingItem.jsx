@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 
-import '/Users/hugocadenat/Documents/Formation_dév_web/P7/kasa/src/styles/LodgingItem.css';
+// import '/Users/hugocadenat/Documents/Formation_dév_web/P7/kasa/src/styles/LodgingItem.css';
+import '../../styles/LodgingItem.css'
 
 const LodgingItem = ({ cover, title, id }) => {
     const url = "/" + id;
