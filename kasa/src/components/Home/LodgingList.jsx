@@ -8,19 +8,15 @@ import '../../styles/LodgingList.css'
 
 const LodgingList = () => {    
     return (
-        <div className='lodgings'>
             <ul className='lodgings-list'>
                 {lodgings.map(({ id, cover, title }) =>
-                    // <div key={id}>
                     <LodgingItem
                         id={id}
                         cover={cover}
                         title={title}
                     />
-                    // </div>
                 )}
             </ul>
-        </div>
     )
 }
 

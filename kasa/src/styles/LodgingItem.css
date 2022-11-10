@@ -5,7 +5,8 @@
     flex-direction: column;
     position: relative;
     border-radius: 10px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+    margin: 15px 0 15px 0;
 }
 
 .lodging-item a{
