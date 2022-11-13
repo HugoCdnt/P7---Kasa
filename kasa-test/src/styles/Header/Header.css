@@ -1,0 +1,24 @@
+header {
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+
+/* MOBILE DEVICES  */
+@media only screen and (max-width: 768px){
+    header{
+        justify-content: space-between;
+    }
+
+    header a{
+        /* box-sizing: content-box; */
+        width: 45%;
+    }
+    
+    .logo{
+        width: 90%;
+    }
+}

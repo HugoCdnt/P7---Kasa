@@ -1,40 +1,65 @@
-// Plugins React
 import {React, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Navigate } from 'react-router-dom'
+// import { Navigate } from 'react-router-dom'
 
-// Data
+// DATA //
 import lodgings from '../data/logements.json'
 
-// Composants
+// COMOPONENTS //
 import Lodging from '../components/LodgingPage/Lodging'
 import Collapse from '../components/Collapse'
-import ImageSlider from '../components/ImageSlider'
+import ImageSlider from '../components/LodgingPage/ImageSlider'
+// import NotFound from '../components/NotFound'
 
-// Styles
+// STYLES //
 import '../styles/Collapse.css'
-import '../styles/LodgingPage.css'
+import '../styles/LodgingPage/LodgingPage.css'
 
 
 
 const LodgingPage = () => {
     const {id} = useParams();
+    const stringifiedLodgings = JSON.stringify(lodgings);
     const foundLodging = lodgings.find(lodging => {
         return lodging.id === id;
     })
 
-    const containerStyles = {
-        width: '100%',
-        height: '415px',
-        margin: '0 auto'
-    }
+    // const title = () => {
+    //     if(stringifiedLodgings.includes(id) === true) {
+    //         return foundLodging.title
+    //     } else {
+    //         return "KASA"
+    //     }
+    // // const navigate = useNavigate();
+    // }
+    
+    
+    
+    // if (stringifiedLodgings.includes(id) !== true) {
+        //     navigate("/notfound");
+        // }
+        // useEffect(() => {
+        //     document.title = `${foundLodging.title}`
+        // }, [foundLodging.title])
 
-    useEffect(() => {
-        document.title = `${foundLodging.title}`
-    }, [foundLodging.title])
-
-    return (
-        <div className='lodging'>
-            <div style={containerStyles}>
+        useEffect(() => {
+            if (stringifiedLodgings.includes(id) === true) {
+                document.title = `${foundLodging.title}`
+                // document.title = `${title()}`
+            // } else {
+            //     document.title = 'Not found'
+            // }
+            }
+        }, [id, stringifiedLodgings, foundLodging])
+        
+        if (stringifiedLodgings.includes(id) !== true) {
+            return(
+                <Navigate to="/notfound" replace />
+            )
+        }
+        return (
+        <div className='lodging-page--container'>
+            <div className='slider-container'>
                 <ImageSlider slides={foundLodging.pictures} />
             </div>
             <Lodging
@@ -55,41 +80,3 @@ const LodgingPage = () => {
 }
 
 export default LodgingPage
-
-    // const returnInt = (element) => {
-    //     return parseInt(element, 10)
-    // };
-
-    // const tags = foundLodging.tags;
-
-    // const tags = [];
-    // for (let i = 0; i < foundLodging.tags.length; i++) {
-    //     tags.push()
-    // }
-    
-    // console.log(foundLodging);
-
-    // <div className='lodging'>
-    //             <Lodging
-    //                 // cover={foundLodging.cover}
-    //                 title={foundLodging.title}
-    //                 id={id}
-    //                 location={foundLodging.location}
-    //                 tags={foundLodging.tags}
-    //             />
-    // </div>
-
-    // return (
-    //     <div className='lodging'>
-    //             {foundLodging.map(({ cover, title, id, location, tags }) =>
-    //                 <Lodging
-    //                     cover={cover}
-    //                     title={title}
-    //                     id={id}
-    //                     location={location}
-    //                     tags={tags}
-    //                 />
-    //             )}
-    //     </div>
-
-    // )

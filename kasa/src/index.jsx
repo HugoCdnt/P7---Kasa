@@ -14,7 +14,7 @@ import LodgingPage from './pages/LodgingPage'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import NotFound from './components/NotFound'
-// import { Navigate } from 'react-router-dom'
+import { Navigate } from 'react-router-dom'
 
 // STYLES
 
@@ -29,8 +29,10 @@ root.render(
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/about" element={<About />}/>
-        <Route path="/:id" element={<LodgingPage />}/>
-        <Route path="*" element={<NotFound />}/>
+        <Route path="/id/:id" element={<LodgingPage />}/>
+        <Route path="/notfound" element={<NotFound />}/>
+        {/* <Route path="*" element={<NotFound />}/> */}
+        <Route path="*" element={<Navigate to="/notfound" replace />}/>
         {/* <Route path="/notfound" element={<NotFound />}/> */}
         {/* <Route path="notfound" element={<NotFound />}/> */}
         {/* {/* <Route path="notfound" element={<NotFound/>}/> */}
