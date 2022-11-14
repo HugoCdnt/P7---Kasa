@@ -12,9 +12,9 @@ import LodgingPage from './pages/LodgingPage'
 
 // COMPONENTS
 import Header from './components/Header'
-import Footer from './components/Footer'
 import NotFound from './components/NotFound'
 import { Navigate } from 'react-router-dom'
+import Footer from './components/Footer'
 
 // STYLES
 
@@ -29,13 +29,9 @@ root.render(
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/about" element={<About />}/>
-        <Route path="/id/:id" element={<LodgingPage />}/>
+        <Route path="/logement/:id" element={<LodgingPage />}/>
         <Route path="/notfound" element={<NotFound />}/>
-        {/* <Route path="*" element={<NotFound />}/> */}
         <Route path="*" element={<Navigate to="/notfound" replace />}/>
-        {/* <Route path="/notfound" element={<NotFound />}/> */}
-        {/* <Route path="notfound" element={<NotFound />}/> */}
-        {/* {/* <Route path="notfound" element={<NotFound/>}/> */}
       </Routes>
       <Footer />
     </Router>

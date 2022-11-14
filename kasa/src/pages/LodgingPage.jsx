@@ -1,6 +1,5 @@
 import {React, useEffect } from 'react'
 import { useParams, Navigate } from 'react-router-dom'
-// import { Navigate } from 'react-router-dom'
 
 // DATA //
 import lodgings from '../data/logements.json'
@@ -9,13 +8,11 @@ import lodgings from '../data/logements.json'
 import Lodging from '../components/LodgingPage/Lodging'
 import Collapse from '../components/Collapse'
 import ImageSlider from '../components/LodgingPage/ImageSlider'
-// import NotFound from '../components/NotFound'
+import Footer from '../components/Footer'
 
 // STYLES //
 import '../styles/Collapse.css'
 import '../styles/LodgingPage/LodgingPage.css'
-
-
 
 const LodgingPage = () => {
     const {id} = useParams();
@@ -24,58 +21,37 @@ const LodgingPage = () => {
         return lodging.id === id;
     })
 
-    // const title = () => {
-    //     if(stringifiedLodgings.includes(id) === true) {
-    //         return foundLodging.title
-    //     } else {
-    //         return "KASA"
-    //     }
-    // // const navigate = useNavigate();
-    // }
-    
-    
-    
-    // if (stringifiedLodgings.includes(id) !== true) {
-        //     navigate("/notfound");
-        // }
-        // useEffect(() => {
-        //     document.title = `${foundLodging.title}`
-        // }, [foundLodging.title])
-
-        useEffect(() => {
-            if (stringifiedLodgings.includes(id) === true) {
-                document.title = `${foundLodging.title}`
-                // document.title = `${title()}`
-            // } else {
-            //     document.title = 'Not found'
-            // }
-            }
-        }, [id, stringifiedLodgings, foundLodging])
-        
-        if (stringifiedLodgings.includes(id) !== true) {
-            return(
-                <Navigate to="/notfound" replace />
-            )
+    useEffect(() => {
+        if (stringifiedLodgings.includes(id) === true) {
+            document.title = `${foundLodging.title}`
         }
-        return (
-        <div className='lodging-page--container'>
-            <div className='slider-container'>
-                <ImageSlider slides={foundLodging.pictures} />
-            </div>
-            <Lodging
-                title={foundLodging.title}
-                id={id}
-                location={foundLodging.location}
-                tags={foundLodging.tags}
-                host={foundLodging.host.name}
-                hostPhoto = {foundLodging.host.picture}
-                rating = {foundLodging.rating}
-            />
-            <div className='lodging-collapses'>
-                <Collapse title="Description" description={foundLodging.description}/>
-                <Collapse title="Équipements" description={foundLodging.equipments.map((equipment) => <li>{equipment}</li>)}/>
-            </div>
+    }, [id, stringifiedLodgings, foundLodging])
+    
+    if (stringifiedLodgings.includes(id) !== true) {
+        return(
+            <Navigate to="/notfound" replace />
+        )
+    }
+    return (
+    <div className='lodging-page--container'>
+        <div className='slider-container'>
+            <ImageSlider slides={foundLodging.pictures} />
         </div>
+        <Lodging
+            title={foundLodging.title}
+            id={id}
+            location={foundLodging.location}
+            tags={foundLodging.tags}
+            host={foundLodging.host.name}
+            hostPhoto = {foundLodging.host.picture}
+            rating = {foundLodging.rating}
+        />
+        <div className='lodging-collapses'>
+            <Collapse title="Description" description={foundLodging.description}/>
+            <Collapse title="Équipements" description={foundLodging.equipments.map((equipment) => <li key={`${foundLodging.id}+ " " + ${equipment}`}>{equipment}</li>)}/>
+        </div>
+        <Footer />
+    </div>
     )
 }
 

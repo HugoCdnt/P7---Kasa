@@ -1,4 +1,4 @@
-import {React, useEffect } from 'react'
+import React, { useEffect } from 'react'
 
 // COMPONENTS //
 import Banner from "../components/Banner";
@@ -17,7 +17,7 @@ const Home = () => {
 })
 
   return (
-    <div>
+    <div>  
       <Banner 
         title="Chez vous, partout et ailleurs"
         image={bannerBackground}
@@ -28,3 +28,4 @@ const Home = () => {
 }
 
 export default Home;
+

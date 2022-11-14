@@ -1,26 +1,15 @@
-.test{
+.about-collapses{
     width: 85%;
-    margin: 0 auto;
+    margin: 0 auto 50px;
 }
 
-.test > div > button{
+.about-collapses > div > button{
     padding: 7px 10px;
-}
-
-.about-component{
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    margin-bottom: 10px;
-    border-radius: 5px;
-}
-
-.about-component p{
-    padding: 5px 10px 5px 10px;
 }
 
 /* MOBILE DEVICES */
 @media only screen and (max-width: 768px){
-    .test{
+    .about-collapses{
         width: 100%;
     }
 }

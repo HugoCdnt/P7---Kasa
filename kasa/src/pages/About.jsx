@@ -22,8 +22,8 @@ const About = () => {
       <Banner 
         image={bannerAbout}
       />
-      <div className="test">
-        {data.map(data => <Collapse title={data.title} description={data.text}/>)}
+      <div className="about-collapses">
+        {data.map(data => <Collapse title={data.title} description={data.text} key={data.title}/>)}
       </div >
     </div>
     )

@@ -6,6 +6,8 @@ import LodgingCard from './LodgingCard';
 import '../../styles/Home/LodgingList.css'
 
 
+// [data, setData] = useState(lodgings)
+
 const LodgingList = () => {    
     return (
             <ul className='lodgings-list'>
@@ -14,6 +16,7 @@ const LodgingList = () => {
                         id={id}
                         cover={cover}
                         title={title}
+                        key={id.toString()}
                     />
                 )}
             </ul>

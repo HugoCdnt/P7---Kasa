@@ -13,7 +13,7 @@ const Lodging = ({ cover, title, id, location, tags, host, hostPhoto, rating }) 
                     <p className='lodging-location'>{location}</p>
                     <ul className="tags">
                         {tags.map((tag) => 
-                            <li>{tag}</li>
+                            <li key={`${id}+ " " + ${tag}`}>{tag}</li>
                         )}
                     </ul>
                 </div>

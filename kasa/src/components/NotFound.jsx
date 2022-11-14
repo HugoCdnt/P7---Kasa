@@ -1,15 +1,26 @@
 import {React, useEffect } from 'react'
-// import { React, } from "react"
+import { NavLink } from "react-router-dom";
+
+// STYLES //
+import '../styles/NotFound.css'
 
 const NotFound = () => {
 
     useEffect(() => {
         document.title = 'Not found'
-    }, [])
-
+    })
+    
     return (
-        <div>
-            <h1>Oups 🙈 Cette page n'existe pas</h1>
+        <div className='not-found--container'>
+            <h1>404</h1>
+            <p>Oups ! La page que vous demandez n'existe pas.</p>
+            <NavLink
+                to= '/' end
+                // style={{ color: 'var(--primary-color)', textDecoration: 'underline' }}
+                style={{ textDecoration: 'underline' }}
+            >
+                <span>Retourner sur la page d'accueil</span>
+            </NavLink>
         </div>
     )
 }
