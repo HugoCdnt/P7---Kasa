@@ -109,5 +109,11 @@ h1, .host p, .title-location-tags p{
 
     .host{
         margin: 0;
+        font-size: .9rem;
+    }
+
+    .host-photo{
+        width: 45px;
+        height: 45px;
     }
 }

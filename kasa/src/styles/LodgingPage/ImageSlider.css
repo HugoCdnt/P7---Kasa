@@ -1,6 +1,9 @@
 .sliderStyles{
-    height:100%;
+    height: 100%;
+    width: 100%;
     position: relative;
+    height: 415px;
+    margin: 0 auto;
 }
 
 .slideStyles{
@@ -11,26 +14,26 @@
     background-size: cover;
 }
 
-.leftArrowStyles{
+.leftArrowStyles, .rightArrowStyles{
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
-    left: 32px;
-    font-size: 45px;
     color: white;
     z-index: 1;
     cursor: pointer;
 }
 
+.leftArrowStyles{
+    left: 32px;
+}
+
 .rightArrowStyles{
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
     right: 32px;
-    font-size: 45px;
-    color: white;
-    z-index: 1;
-    cursor: pointer;
+}
+
+.leftArrowStyles img, .rightArrowStyles img{
+    width: 50px;
+    height: 50px;
 }
 
 .dotsContainerStyles{
@@ -52,4 +55,29 @@
     margin: -45px 0 -15px 0;
     color: white;
     text-shadow: 1px 1px 2px black;
+}
+
+
+/* MOBILE DEVICES */
+@media only screen and (max-width: 768px){
+    .sliderStyles{
+        height: 255px;
+    }
+
+    .slideStyles{
+        border-radius: 10px;
+    }
+
+    .leftArrowStyles img, .rightArrowStyles img{
+        width: 25px;
+        height: 25px;
+    }
+
+    .leftArrowStyles{
+        left: .5rem;    
+    }
+
+    .rightArrowStyles{
+        right: .5rem;
+    }
 }

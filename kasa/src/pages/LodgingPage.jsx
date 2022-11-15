@@ -34,9 +34,7 @@ const LodgingPage = () => {
     }
     return (
     <div className='lodging-page--container'>
-        <div className='slider-container'>
-            <ImageSlider slides={foundLodging.pictures} />
-        </div>
+        <ImageSlider slides={foundLodging.pictures} />
         <Lodging
             title={foundLodging.title}
             id={id}

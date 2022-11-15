@@ -3,6 +3,10 @@ import { useState } from "react";
 // STYLES ..
 import "../../styles/LodgingPage/ImageSlider.css";
 
+// import arrow from '../../images.arrow.svg'
+import leftArrow from '../../images/arrow-left.svg'
+import rightArrow from '../../images/arrow-right.svg'
+
 const ImageSlider = ({slides}) => {
     const [currentIndex, setCurrentIndex] = useState(0)
 
@@ -26,11 +30,16 @@ const ImageSlider = ({slides}) => {
         setCurrentIndex(slideIndex)
     }
 
+    const arrowLeft = <img src={leftArrow} alt='arrow-left' className='arrow'/>
+    const arrowRight = <img src={rightArrow} alt='arrow-right' className='arrow'/>
+
     return (
         slides.length > 1 ?
         <div className='sliderStyles'>
-            <div className='leftArrowStyles' onClick={goToPrevious}>❰</div>
-            <div className='rightArrowStyles' onClick={goToNext}>❱</div>
+            {/* <div className='leftArrowStyles' onClick={goToPrevious}>❰</div>*/}
+            <div className='leftArrowStyles' onClick={goToPrevious}>{arrowLeft}</div>
+            {/* <div className='rightArrowStyles' onClick={goToNext}>❱</div> */}
+            <div className='rightArrowStyles' onClick={goToNext}>{arrowRight}</div>
             <div style={slideStyles} className='slideStyles'></div>
             <div className='slideIndex'>{currentIndex + 1}/{slides.length}</div>
             <div className='dotsContainerStyles'>

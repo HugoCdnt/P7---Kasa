@@ -37,3 +37,15 @@
     transform: rotate(180deg);
     transition: .2s ease-in-out;
 }
+
+
+/* MOBILE DEVICES */
+@media only screen and (max-width: 768px){
+    .collapse-button{
+        font-size: .9rem;
+    }
+
+    .collapse-description{
+        font-size: .8rem;
+    }
+}
